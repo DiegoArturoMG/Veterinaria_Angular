@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Consulta de Mascota</h1>
+  <hr />
+  <div class="p-grid">
+    <div class="p-col">
+      <label for="mascota_id">Id</label>
+      <input
+        id="mascota_id"
+        type="text"
+        style="width: 100%;"
+        pInputText
+        [(ngModel)]="mascota_id"
+      />
+    </div>
+    <div class="p-col">
+      <label for="mascota_nombre">Nombre</label>
+      <input
+        id="mascota_nombre"
+        type="text"
+        style="width: 100%;"
+        pInputText
+        [(ngModel)]="mascota_nombre"
+      />
+    </div>
+    <div class="p-col">
+      <label for="mascota_raza">Raza</label>
+      <br />
+      <p-dropdown
+        [options]="razas"
+        [(ngModel)]="mascota_raza"
+        [style]="{ width: '100%' }"
+        optionLabel="name"
+        placeholder="Seleccione una raza"
+        [showClear]="true"
+      ></p-dropdown>
+    </div>
+  </div>
+</div>
